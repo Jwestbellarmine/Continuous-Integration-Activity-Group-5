@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculator testing lab</title>
+  <style>
+    body { font: 18px system-ui; max-width: 36rem; margin: 3rem auto; padding: 1rem; }
+    label { display: block; margin-top: 1rem; }
+    input, select, button { font: inherit; padding: .5rem; }
+    button { display: block; margin-top: 1.5rem; }
+    [role="alert"] { color: #a51c1c; }
+  </style>
+</head>
+<body>
+  <h1>Calculator</h1>
+  <form id="calculator" novalidate>
+    <label for="first">First number</label>
+    <input id="first" type="text" inputmode="decimal">
+    <label for="operation">Operation</label>
+    <select id="operation">
+      <option value="add">Add</option>
+      <option value="subtract">Subtract</option>
+      <option value="multiply">Multiply</option>
+      <option value="divide">Divide</option>
+    </select>
+    <label for="second">Second number</label>
+    <input id="second" type="text" inputmode="decimal">
+    <button type="submit">Calculate</button>
+  </form>
+  <p role="status" id="result"></p>
+  <p role="alert" id="error"></p>
+  <script type="module" src="/src/app.js"></script>
+</body>
+</html>
